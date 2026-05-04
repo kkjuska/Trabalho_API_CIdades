@@ -1,5 +1,14 @@
 [
-    {"id": 1, "nome": "Florianopolis"},
-    {"id": 2, "nome": "Belo Horizonte"},
-    {"id": 3, "nome": "Gramado"}
+  {
+    "id": 1,
+    "nome": "floripa"
+  },
+  {
+    "id": 2,
+    "nome": "BH"
+  },
+  {
+    "id": 4,
+    "nome": "curitiba"
+  }
 ]
