@@ -34,16 +34,16 @@ async function writeFile(data) {
     }
 }
 
-const cidadeService = {
+class CidadeService  {
 
     async getAll() {
         return await readFile();
-    },
+    }
 
     async getById(id) {
         const cidades = await readFile();
         return cidades.find(c => c.id === Number(id));
-    },
+    }
 
     async create(data) {
         const cidades = await readFile();
@@ -61,7 +61,7 @@ const cidadeService = {
         await writeFile(cidades);
 
         return newCidade;
-    },
+    }
 
     async updatePatch(id, data) {
         const cidades = await readFile();
@@ -77,7 +77,7 @@ const cidadeService = {
         await writeFile(cidades);
 
         return cidades[index];
-    },
+    }
 
     async updatePut(id, data) {
         const cidades = await readFile();
@@ -93,7 +93,7 @@ const cidadeService = {
         await writeFile(cidades);
 
         return cidades[index];
-    },
+    }
 
     async delete(id) {
         const cidades = await readFile();
@@ -108,4 +108,4 @@ const cidadeService = {
     }
 };
 
-export { cidadeService };
+export const cidadeService = new CidadeService()
